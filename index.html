@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Alex's Escape</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gameWrap">
+  <canvas id="game" width="1000" height="640"></canvas>
+
+  <div id="ui">
+    <div class="small">Leben</div>
+    <div class="hpbar"><div id="hpinner" class="hpinner"></div></div>
+    <div class="small">Rüstung</div>
+    <div class="armorbar"><div id="armorinner" class="armorinner"></div></div>
+    <div id="timer" class="small">Levelzeit: 20:00</div>
+    <div id="levelName" class="small" style="margin-top:6px">Ebene: Wüste</div>
+  </div>
+
+  <div id="rightUI">
+    <div><strong>Inventar (10 Plätze)</strong></div>
+    <div id="inventory" style="margin-top:8px"></div>
+    <div style="margin-top:8px"><strong>Hotbar (5)</strong></div>
+    <div class="hotbar" id="hotbar"></div>
+    <div style="margin-top:8px"><strong>Log</strong></div>
+    <div id="log" class="log"></div>
+  </div>
+
+  <div id="msg" style="display:none"></div>
+
+  <div id="overlay" style="display:none">
+    <div class="panel" id="panelContent"></div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

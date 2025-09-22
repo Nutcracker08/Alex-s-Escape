@@ -1,0 +1,66 @@
+:root{
+  --ui-bg: rgba(0,0,0,0.6);
+  --font: "Segoe UI", Roboto, Arial, sans-serif;
+}
+html,body{
+  height:100%;
+  margin:0;
+  background:#111;
+  color:#fff;
+  font-family:var(--font);
+}
+#gameWrap{
+  position:relative;
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+canvas{
+  background:#88c0d0;
+  border:6px solid #222;
+  display:block;
+}
+#ui {
+  position:absolute; left:12px; top:12px; color:#fff;
+  background:var(--ui-bg); padding:10px; border-radius:8px;
+}
+.hpbar, .armorbar {
+  width:240px;height:18px;border:2px solid #000;background:#550000;
+  margin-bottom:6px;position:relative;
+}
+.hpinner{height:100%;background:lime;display:block}
+.armorinner{height:100%;background:deepskyblue;display:block}
+#timer {margin-top:6px}
+#rightUI{
+  position:absolute; right:12px; top:12px; background:var(--ui-bg);
+  padding:10px; border-radius:8px; width:320px;
+}
+#inventory {display:grid;grid-template-columns:repeat(5,48px);gap:6px}
+.slot{
+  width:48px;height:48px;background:#222;border:2px solid #000;
+  display:flex;align-items:center;justify-content:center;font-size:12px
+}
+.hotbar{display:flex;gap:6px;margin-top:8px}
+.hotbar .slot{width:56px;height:56px}
+#msg{
+  position:absolute;left:50%;transform:translateX(-50%);
+  bottom:18px;background:var(--ui-bg);padding:8px;border-radius:6px
+}
+#overlay{
+  position:absolute;left:0;top:0;right:0;bottom:0;
+  display:flex;align-items:center;justify-content:center;pointer-events:none
+}
+#overlay .panel{
+  background:rgba(0,0,0,0.85);padding:20px;border-radius:12px;pointer-events:auto;
+}
+button{
+  padding:8px 12px;border-radius:6px;border:0;background:#2b7;color:#002;cursor:pointer
+}
+.small{font-size:13px;color:#ddd}
+.log{
+  height:140px;overflow:auto;background:#111;
+  padding:6px;border-radius:6px;margin-top:6px;font-size:13px
+}
+.credits{font-size:14px;line-height:1.5}
